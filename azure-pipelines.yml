@@ -29,3 +29,7 @@ steps:
 - script: go get -v -t -d ./...
   workingDirectory: '$(modulePath)'
   displayName: 'go get dependencies'
+# build the project
+- script: go build -v .
+  workingDirectory: '$(modulePath)'
+  displayName: 'Build'
