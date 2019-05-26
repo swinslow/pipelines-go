@@ -33,3 +33,7 @@ steps:
 - script: go build -v .
   workingDirectory: '$(modulePath)'
   displayName: 'Build'
+# test the project
+- script: go test -v ./...
+  workingDirectory: '$(modulePath)'
+  displayName: 'Run tests'
